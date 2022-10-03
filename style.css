@@ -1,0 +1,47 @@
+#top{
+    display: flex;
+    flex: 1;
+    height: 25vh;
+    width: auto;
+    background-color: aquamarine;
+}
+
+#mid{
+    display: flex;
+    flex: 1;
+    height: 50vh;
+    width: auto;
+    background-color: gainsboro;
+    align-items: center;
+    justify-content: center;
+}
+
+#bot{
+    display: flex;
+    flex: 1;
+    height: 25vh;
+    width: auto;
+    background-color: aquamarine;
+}
+
+#calcBox {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 300px;
+    background-color: beige;
+    align-items: right;
+    justify-content: center;
+}
+#screenBox {
+    height: 150px;
+    width: auto;
+    background-color: goldenrod;
+    margin-bottom:  50px;
+}
+
+.buttons{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
