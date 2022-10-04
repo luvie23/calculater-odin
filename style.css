@@ -25,7 +25,7 @@ body {
     flex: 1;
     height: 80vh;
     width: auto;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
 }
 
@@ -60,8 +60,9 @@ body {
     margin-bottom:  50px;
     align-items: center;
     justify-content: right;
-    border: 5px solid #5E716A;
+    border: 2px solid #5E716A;
     border-radius: 10px;
+    box-shadow: inset 10px 10px 55px 10px rgba(0,0,0,0.5);
 }
 
 #screen {
@@ -71,6 +72,7 @@ body {
 #buttonBox{
     background-color:  #A9A9A9;
     border-radius: 10px;
+    
 }
 
 .buttons{
@@ -79,6 +81,7 @@ body {
     width: 50px;
     margin: 2px;
     border-radius: 10px;
+    box-shadow: 1px 3px 3px 0px rgba(0,0,0,0.9);
 }
 
 #lowestButtons {
@@ -86,6 +89,7 @@ body {
     flex: 1;
     align-items: center;
     justify-content: space-evenly;
+    
 }
 
 .lowButtons{
@@ -93,6 +97,7 @@ body {
     height: 50px;
     margin: 5px;
     border-radius: 10px;
+    box-shadow: 1px 3px 3px 0px rgba(0,0,0,0.9);
     
 }
 
