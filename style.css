@@ -1,27 +1,40 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('./font/digital.ttf');
+   }
+html{
+    background-image: url("./img/background.jpg");
+    background-size: cover;
+}
+body {
+    padding:0;
+    margin:0;
+}
+
+
 #top{
     display: flex;
     flex: 1;
-    height: 25vh;
+    height: 10vh;
     width: auto;
-    background-color: aquamarine;
+
 }
 
 #mid{
     display: flex;
     flex: 1;
-    height: 50vh;
+    height: 80vh;
     width: auto;
-    background-color: gainsboro;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 
 #bot{
     display: flex;
     flex: 1;
-    height: 25vh;
+    height: 8vh;
     width: auto;
-    background-color: aquamarine;
+
 }
 
 #calcBox {
@@ -29,27 +42,74 @@
     flex-direction: column;
     height: 450px;
     width: 300px;
-    background-color: beige;
+    background-color: #625D5D;
     align-items: center;
     justify-content: center;
+    margin: 0px;
+    border: 5px solid #232023;
+    border-radius: 10px;
+
 }
+
 #screenBox {
+    font-family:'digital-clock-font';
     display: flex;
     height: 60px;
-    width: 300px;
-    background-color: goldenrod;
+    width: 280px;
+    background-color: #009933;
     margin-bottom:  50px;
     align-items: center;
     justify-content: right;
+    border: 5px solid #5E716A;
+    border-radius: 10px;
 }
 
 #screen {
     font-size: 50px;
 }
 
+#buttonBox{
+    background-color:  #A9A9A9;
+    border-radius: 10px;
+}
 
 .buttons{
+    background-color: #DCDCDC;
     height: 50px;
     width: 50px;
     margin: 2px;
+    border-radius: 10px;
+}
+
+#lowestButtons {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.lowButtons{
+    align-self: center;
+    height: 50px;
+    margin: 5px;
+    border-radius: 10px;
+    
+}
+
+#equalButton{
+    width: 163px;
+}
+
+#clearButton {
+    width: 106px;
+    background-color: #ff6700;
+}
+
+#cc{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: #B6B6B4;
+    width: auto;
+    height: 2vh;
 }

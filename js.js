@@ -6,6 +6,8 @@ let displayNum = '';
 let storedNum = "";
 let operatorPressed = false;
 let currentOperator = "";
+let sound = new Audio("buttonsound.wav");
+
 
 function addition(a, b){
     return (a + b);
@@ -38,6 +40,7 @@ function operate(a,b,operator) {
 }
 
 buttons.addEventListener('click', (e) => {
+    sound.play()
     const isButton = e.target.nodeName === 'BUTTON';
     if (!isButton){
         return;
@@ -48,15 +51,15 @@ buttons.addEventListener('click', (e) => {
             return;
         }
         displayNum += e.target.textContent;
-        showOnScreen()
+        showOnScreen();
     } 
 
     if (operators.includes(e.target.textContent)){
 
         if (operatorPressed){
-        let newNumber = operate(storedNum, Number(displayNum), currentOperator)
-        displayNum = newNumber
-        showOnScreen()
+        let newNumber = operate(storedNum, Number(displayNum), currentOperator);
+        displayNum = newNumber;
+        showOnScreen();
             
         }
 
@@ -64,13 +67,33 @@ buttons.addEventListener('click', (e) => {
     displayNum = '';
     operatorPressed = true;
     currentOperator = e.target.textContent;
+    
         
+    }
+
+    if (e.target.textContent == "=") {
+        if(storedNum == ""){
+            return;
+        }
+        let newNumber = operate(storedNum, Number(displayNum), currentOperator)
+        displayNum = newNumber;
+        showOnScreen();
+        storedNum = Number(screen.innerText);
+        operatorPressed = false;
+    }
+
+    if (e.target.textContent == "AC") {
+        displayNum = '';
+        storedNum = "";
+        operatorPressed = false;
+        currentOperator = "";
+        showOnScreen();
+
     }
 })
 
 function showOnScreen(){
     screen.innerText = displayNum;
-
     if (screen.innerText[0] == 0){
         screen.innerText = screen.innerText.slice(0,0)
     }
